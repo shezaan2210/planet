@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Planets</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loadingScreen" class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-90 z-[10] transition-opacity duration-500">
+    <!-- Rotating Planet Icon -->
+    <div id="planetIcon" class="w-24 h-24 mb-6 border-4 border-white rounded-full border-t-transparent animate-spin"></div>
+    
+    <!-- Progress Bar -->
+    <div class="w-4/5 max-w-xs h-2 bg-gray-700 rounded-full mt-4">
+      <div id="progressBar" class="h-full bg-green-500 rounded-full transition-all duration-300 ease-out" style="width: 0;"></div>
+    </div>
+    <p id="loadingText" class="text-white text-lg mt-4">Loading...</p>
+  </div>
+  
+  <!-- <div class="w-full overflow-hidden"> -->
+    <div class="w-full h-screen   absolute top-0 left-0 z-[2]">
+      <nav class="w-full flex justify-between items-center px-[3vw] py-[1.5vw] text-lg font-['bellina'] font-light capitalize text-white">
+        <a href="#">planets</a>
+        <div class="flex gap-[2vw]">
+          <a href="#">home</a>
+          <a href="#">about</a>
+          <a href="#">contact</a>
+        </div>
+      </nav>
+
+      <div class="w-full text-white flex flex-col items-center absolute top-[15%] capitalize font-['bellina_bold']">
+        <div class="w-[26em]  h-[6em] overflow-hidden">
+          <h1 class="headings text-center  h-full text-8xl">earth</h1>
+          <h1 class="headings text-center  h-full text-8xl">mars</h1>
+          <h1 class="headings text-center  h-full text-8xl">venus</h1>
+          <h1 class="headings text-center  h-full text-8xl">mercury</h1>
+        </div>
+
+        <div class="w-[15em] h-[2em] overflow-hidden">
+          <h6 class="para text-center h-full text-lg font-['bellina']">it's our planet</h6>
+          <h6 class="para text-center h-full text-lg font-['bellina']">it's our next planet</h6>
+          <h6 class="para text-center h-full text-lg font-['bellina']">it's no man's zone</h6>
+          <h6 class="para text-center h-full text-lg font-['bellina']">it's not decided yet</h6>
+        </div>
+      <div class="w-[16rem] h-[1px] mt-4 bg-gradient-to-r from-transparent via-white to-transparent"></div>
+      </div>
+
+    </div>
+    <canvas id="webgl"></canvas>
+  <!-- </div>  -->
+
+
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
